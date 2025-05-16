@@ -9,22 +9,14 @@ import { format } from 'date-fns';
 import { getBlogDetail, getBlogList } from '@/app/_libs/microcms/blog';
 import { notFound } from 'next/navigation';
 
-// ✅ Next.js App Router 用の params 型
-type Props = {
-  params: {
-    slug: string;
-  };
-};
-
-export default async function Page({ params }: Props) {
+export default async function Page({ params }: { params: { slug: string } }) {
   const data = await getBlogDetail(params.slug);
   if (!data) notFound();
 
-  // 全記事一覧取得（publishedAt順）で前後記事を特定
   const allData = await getBlogList({
     queries: {
       orders: 'publishedAt',
-      limit: 100, // microCMSの上限は最大1000件
+      limit: 100,
     },
   });
 
@@ -43,7 +35,6 @@ export default async function Page({ params }: Props) {
   return (
     <main className="main__sub --bgSecond">
       <Breadcrumb items={breadcrumbItems} bgSecond={true} />
-
       <article className={styles.blogDetail}>
         <div className={clsx(styles.inner, 'innerQuaternary')}>
           <div className={styles.head}>
@@ -59,7 +50,6 @@ export default async function Page({ params }: Props) {
               </time>
             </div>
           </div>
-
           <div className={styles.content}>
             <div className={styles.body}>
               <div
@@ -67,7 +57,6 @@ export default async function Page({ params }: Props) {
                 dangerouslySetInnerHTML={{ __html: data.content }}
               />
             </div>
-
             {data.image?.url && (
               <div className={styles.imageWrap}>
                 <Image
@@ -124,7 +113,6 @@ export default async function Page({ params }: Props) {
   );
 }
 
-// ✅ SSG対応＋params型エラー回避のため必須
 export async function generateStaticParams() {
   const allData = await getBlogList({
     queries: {
