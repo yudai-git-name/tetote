@@ -9,15 +9,16 @@ import { format } from 'date-fns';
 import { getBlogDetail, getBlogList } from '@/app/_libs/microcms/blog';
 import { notFound } from 'next/navigation';
 
+// ✅ Next.js App Router 用の params 型
+type Props = {
+  params: {
+    slug: string;
+  };
+};
 
-
-	export default async function Page({
-		params,
-	}: {
-		params: { slug: string };
-	}) {
-		const data = await getBlogDetail(params.slug);
-		if (!data) notFound();
+export default async function Page({ params }: Props) {
+  const data = await getBlogDetail(params.slug);
+  if (!data) notFound();
 
   // 全記事一覧取得（publishedAt順）で前後記事を特定
   const allData = await getBlogList({
@@ -81,7 +82,6 @@ import { notFound } from 'next/navigation';
         </div>
       </article>
 
-      {/* ✅ 前後記事表示部分 */}
       <div className={styles.buttons}>
         {prevPost && (
           <div className={styles.button}>
@@ -124,7 +124,7 @@ import { notFound } from 'next/navigation';
   );
 }
 
-
+// ✅ SSG対応＋params型エラー回避のため必須
 export async function generateStaticParams() {
   const allData = await getBlogList({
     queries: {
