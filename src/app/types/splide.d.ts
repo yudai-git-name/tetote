@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 declare module '@splidejs/react-splide' {
   import { ComponentType } from 'react';
 
