@@ -1,0 +1,101 @@
+.career {
+	margin-top: 146px;
+	margin-bottom: 176px;
+}
+
+.inner {}
+
+.head {}
+
+.heading2 {
+	font-size: 32px;
+	font-weight: 700;
+	line-height: 150%;
+}
+
+.diagrams {
+	margin-top: 113px;
+	display: flex;
+	flex-direction: column;
+	gap: 48px;
+}
+
+.diagramsText:nth-child(1) {
+	order: 1;
+}
+
+.diagramsText:nth-child(2) {
+	order: 3;
+}
+
+.diagramsText {}
+
+.imageWrap {
+	order: 2;
+}
+
+.training {
+	margin-top: 89px;
+}
+
+.boxes {
+	display: flex;
+	flex-direction: column;
+	gap: 37px;
+}
+
+.box {}
+
+.heading3 {
+	padding: 12px 21px;
+	background: var(--bgQuaternary);
+	font-size: 24px;
+	font-weight: 700;
+	border-radius: 10px;
+}
+
+.body {
+	margin-top: 50px;
+}
+
+.text {
+	line-height: 180%;
+}
+
+@media (max-width: 599px) {
+
+	.career {
+		margin-top: 92px;
+		margin-bottom: 102px;
+	}
+
+	.heading2 {
+		font-size: 26px;
+	}
+
+	.diagrams {
+		margin-top: 70px;
+		gap: 22px;
+	}
+
+	.diagramsText {
+		font-size: 14px;
+	}
+
+	.training {
+		margin-top: 66px;
+	}
+
+	.heading3 {
+		padding: 10px 16px;
+		font-size: 20px;
+	}
+
+	.body {
+		margin-top: 26px;
+	}
+
+	.text {
+		font-size: 14px;
+	}
+}

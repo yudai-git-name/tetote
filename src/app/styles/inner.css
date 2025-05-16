@@ -1,0 +1,35 @@
+.innerPrimary {
+	max-width: calc(1024px + 20px * 2);
+	width: 100%;
+	margin-inline: auto;
+	padding-inline: 20px;
+}
+
+.innerSecondary {
+	max-width: calc(956px + 20px * 2);
+	width: 100%;
+	margin-inline: auto;
+	padding-inline: 20px;
+}
+
+.innerTertiary {
+	max-width: calc(980px + 20px * 2);
+	width: 100%;
+	margin-inline: auto;
+	padding-inline: 20px;
+}
+
+.innerQuaternary {
+	max-width: calc(800px + 20px * 2);
+	width: 100%;
+	margin-inline: auto;
+	padding-inline: 20px;
+}
+
+.innerSenary {
+	max-width: calc(880px + 20px * 2);
+	width: 100%;
+	margin-inline: auto;
+	padding-inline: 20px;
+}
+

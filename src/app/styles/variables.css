@@ -1,0 +1,31 @@
+:root {
+
+	--textPrimary: #222222;
+	--textSecondary: #FFFFFF;
+	--textTertiary: #988C2C;
+	--textQuaternary: #9797971A;
+	--textQuinary: #999999;
+	--textSenary: #4B4B4B;
+	--textSeptenary: #F0F0F0;
+	--textOctonary: #757575;
+
+	--bgPrimary: #FFFFFF;
+	--bgSecondary: #FAF7F1;
+	--bgTertiary: #222222;
+	--bgQuaternary: #AFA86F;
+	--bgQuinary: #F0F0F0;
+	--bgSenary: #988C2C;
+
+	--buttonPrimary: #222222;
+	--buttonSecondary: #AFA86F;
+	--buttonTertiary: #000000;
+	--buttonQuaternary: #988C2C;
+	--buttonQuinary: #ffffff;
+
+	--borderPrimary: #222222;
+	--borderSecondary: #AFA86F;
+
+	--fontNotoSansJp: ;
+	--fontViga: ;
+	--fontPoppins: ;
+}

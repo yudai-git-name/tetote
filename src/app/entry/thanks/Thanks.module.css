@@ -1,0 +1,41 @@
+.thanks {
+	margin-bottom: 139px;
+	padding-top: 34px;
+	padding-bottom: 57px;
+	background: var(--bgSecondary);
+	text-align: center;
+}
+
+.inner {
+	padding-top: 58px;
+	padding-bottom: 95px;
+	background: var(--bgPrimary);
+	border-radius: 10px;
+}
+
+.title {
+	font-size: 32px;
+	font-weight: 700;
+}
+
+.text {
+	margin-top: 51px;
+}
+
+@media (max-width: 599px) {
+
+	.inner {
+		padding-top: 45px;
+		padding-bottom: 72px;
+
+	}
+
+	.title {
+		font-size: 22px;
+	}
+
+	.text {
+		margin-top: 38px;
+		font-size: 14px;
+	}
+}

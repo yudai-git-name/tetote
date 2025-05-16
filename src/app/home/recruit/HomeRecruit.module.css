@@ -1,0 +1,77 @@
+.recruit {
+	padding-bottom: 139px;
+	background: var(--bgSecondary);
+}
+
+.inner {}
+
+.head {
+	text-align: center;
+}
+
+.staffRecruit {
+	text-align: center;
+}
+
+.buttons {
+	margin-top: 64px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 16px;
+	row-gap: 20px;
+}
+
+.button {}
+
+.oneColumn {
+	grid-column: span 2 / span 2;
+}
+
+.buttonLink {
+	position: relative;
+	width: 100%;
+	text-align: center;
+	padding-block: 50px;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 100%;
+	background: var(--buttonQuinary);
+	transition: all 0.3s ease;
+}
+
+.buttonLink:hover,
+.buttonLink:focus {
+	background: var(--buttonPrimary);
+	color: var(--textSecondary);
+}
+
+.icon {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 20px;
+	font-size: 32px;
+}
+
+@media (max-width: 599px) {
+
+	.recruit {
+		padding-bottom: 88px;
+	}
+
+	.buttons {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	.oneColumn {
+		grid-column: span 1 / span 1;
+	}
+
+	.buttonLink {
+		padding-block: 33px;
+	}
+
+	.icon {
+		font-size: 24px;
+	}
+}

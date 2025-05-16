@@ -1,0 +1,350 @@
+.anotherColor {
+	color: var(--textTertiary);
+}
+
+.entry {
+	background: var(--bgSecondary);
+	padding-top: 33px;
+	padding-bottom: 57px;
+}
+
+.inner {
+	padding: 58px clamp(1.25rem, 0.15rem + 4.69vw, 4.375rem) 81px;
+	background: var(--bgPrimary);
+	border-radius: 10px;
+}
+
+.head {
+	padding-bottom: 95px;
+	border-bottom: 1px dotted var(--borderSecondary);
+}
+
+.heading2 {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.en {
+	font-size: 24px;
+}
+
+.ja {
+	font-size: 32px;
+	font-weight: 700;
+	line-height: 150%;
+}
+
+.jaColor {
+	color: var(--textTertiary);
+}
+
+.headText {
+	margin-top: 51px;
+	max-width: 495px;
+	width: 100%;
+	margin-inline: auto;
+}
+
+.content {
+	margin-top: 97px;
+}
+
+.form {}
+
+
+.field {
+	display: flex;
+	align-items: center;
+}
+
+.field:not(:first-child) {
+	margin-top: 27px;
+}
+
+.formField {}
+
+.formFieldHead {
+	width: 163px;
+}
+
+.formFieldLabel {}
+
+.formFieldLabelSmall {
+	width: 128px;
+	display: block;
+}
+
+.required {}
+
+.formFieldItem {
+	width: calc(100% - 163px);
+}
+
+.inputText,
+.inputTextArea {
+	width: 100%;
+	padding: 20px;
+	background: var(--bgSecondary);
+	border: 1px solid var(--borderSecondary);
+	border-radius: 10px;
+}
+
+.inputText,
+.inputTextArea::placeholder {
+	color: var(--textOctonary);
+}
+
+.inputText {}
+
+.inputDateOfBirth {
+	width: 230px;
+	padding: 20px;
+	background: var(--bgSecondary);
+	border: 1px solid var(--borderSecondary);
+	border-radius: 10px;
+}
+
+.inputTextArea {
+	height: 240px;
+	resize: vertical;
+}
+
+.inputRadio {}
+
+.inputTextArea {}
+
+.dateOfBirth {
+	width: calc(100% - 163px);
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	row-gap: 15px;
+}
+
+.formFieldItemDateOfBirth {
+	position: relative;
+	width: 85%;
+	white-space: nowrap;
+}
+
+.DateOfBirthText {
+	padding-left: 12px;
+}
+
+.year {}
+
+.moth,
+.day {
+	grid-row-start: 2;
+}
+
+.formFieldRadios {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.formFieldRadio {}
+
+.inputRadio {
+	width: 1px;
+	height: 1px;
+	position: absolute;
+	clip: rect(0, 0, 0, 0);
+	overflow: hidden;
+}
+
+.inputRadio:checked~.formFieldRadioText::after {
+	opacity: 1;
+}
+
+.formFieldRadioText {
+	position: relative;
+	font-weight: 700;
+	padding-left: 34px;
+	cursor: pointer;
+}
+
+.formFieldRadioText::before,
+.formFieldRadioText::after {
+	content: '';
+	position: absolute;
+	top: 58%;
+	transform: translateY(-50%);
+	left: 0;
+	border-radius: 50%;
+}
+
+.formFieldRadioText::before {
+	width: 24px;
+	height: 24px;
+	border: 1px solid var(--borderSecondary);
+	background: var(--bgSecondary);
+}
+
+.formFieldRadioText::after {
+	width: 10px;
+	height: 10px;
+	background: var(--bgTertiary);
+	left: 7px;
+	opacity: 0;
+}
+
+.privacy {
+	text-align: center;
+	margin-top: 99px;
+	font-size: 14px;
+}
+
+.privacyCheckbox {}
+
+.inputCheckbox {
+	width: 1px;
+	height: 1px;
+	position: absolute;
+	clip: rect(0, 0, 0, 0);
+	overflow: hidden;
+}
+
+.inputCheckbox:checked~.privacyCheckboxText::after {
+	opacity: 1;
+}
+
+.privacyCheckboxText {
+	position: relative;
+	padding-left: 24px;
+	font-size: 14px;
+}
+
+.privacyCheckboxText::before,
+.privacyCheckboxText::after {
+	content: '';
+	position: absolute;
+	top: 56%;
+	transform: translateY(-50%);
+	left: 0;
+}
+
+.privacyCheckboxText::before {
+	width: 16px;
+	height: 16px;
+	border: 1px solid var(--borderSecondary);
+	background: var(--bgSecondary);
+}
+
+.privacyCheckboxText::after {
+	width: 10px;
+	height: 10px;
+	background: var(--bgTertiary);
+	left: 3px;
+	opacity: 0;
+}
+
+.button {
+	margin-top: 59px;
+	max-width: 256px;
+	width: 100%;
+	margin-inline: auto;
+}
+
+.inputSubmit {
+	text-align: center;
+	padding-block: 20px;
+	width: 100%;
+	background: transparent;
+	border: 1px solid var(--buttonPrimary);
+}
+
+.error {
+	margin-top: 12px;
+	color: red;
+}
+
+@media (max-width: 848px) {
+
+	.dateOfBirth {
+		grid-template-columns: 100%;
+	}
+
+	.moth,
+	.day {
+		grid-row-start: auto;
+	}
+}
+
+@media (max-width: 599px) {
+
+	.head {
+		padding-bottom: 66px;
+	}
+
+	.en {
+		font-size: 20px;
+	}
+
+	.ja {
+		font-size: 26px;
+	}
+
+	.headText {
+		margin-top: 38px;
+		font-size: 14px;
+		text-align: center;
+	}
+
+	.content {
+		margin-top: 54px;
+	}
+
+	.field {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.field:not(:first-child) {
+		margin-top: 22px;
+	}
+
+	.formFieldHead {
+		width: 100%;
+	}
+
+	.formFieldLabelSmall {
+		width: 100%;
+	}
+
+	.formFieldItem {
+		width: 100%;
+		margin-top: 12px;
+	}
+
+	.inputText,
+	.inputTextArea {
+		padding: 14px;
+	}
+
+	.inputTextArea {
+		height: 180px;
+	}
+
+	.dateOfBirth {
+		gap: 8px;
+	}
+
+	.inputDateOfBirth {
+		padding: 14px;
+	}
+
+	.formFieldRadios {
+		margin-top: 14px;
+	}
+
+	.privacy {
+		margin-top: 68px;
+	}
+
+	.button {
+		margin-top: 46px;
+	}
+}

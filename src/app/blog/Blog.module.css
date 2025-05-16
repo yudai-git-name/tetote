@@ -1,0 +1,35 @@
+.blog {
+	margin-top: 130px;
+	margin-bottom: 140px;
+}
+
+.inner {}
+
+.content {}
+
+.boxes {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 52px;
+	row-gap: 23px;
+}
+
+@media (max-width: 960px) {
+
+	.boxes {
+		column-gap: 30px;
+	}
+}
+
+@media (max-width: 768px) {
+
+	.boxes {
+		grid-template-columns: 100%;
+	}
+}
+
+@media (max-width: 599px) {
+	.boxes {
+		row-gap: 20px;
+	}
+}

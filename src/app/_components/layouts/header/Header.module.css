@@ -1,0 +1,98 @@
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding-block: 26px;
+	z-index: 500;
+}
+
+.header {
+	transition: background-color 0.3s ease;
+	background-color: transparent;
+}
+
+.whiteBg {
+	background-color: #fff;
+}
+
+.inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-inline: 30px;
+}
+
+.heading1 {
+	width: 250px;
+}
+
+.heading1Logo {}
+
+.content {
+	display: flex;
+	align-items: center;
+	gap: 40px;
+}
+
+.buttons {
+	display: flex;
+	align-items: center;
+	gap: 22px;
+	padding-right: 92px;
+}
+
+.button {
+	width: 126px;
+}
+
+.buttonLink {
+	width: 100%;
+	padding-block: 14px;
+	text-align: center;
+	font-size: 14px;
+	line-height: 100%;
+	color: var(--textSecondary);
+	transition: all 0.3s ease;
+}
+
+.details {
+	background: var(--buttonPrimary);
+}
+
+.details:hover,
+.details:focus {
+	background: var(--buttonTertiary);
+}
+
+.entry {
+	background: var(--buttonSecondary);
+}
+
+.entry:hover,
+.entry:focus {
+	background: var(--buttonQuaternary);
+}
+
+
+@media (max-width: 768px) {
+
+	.buttons {
+		display: none;
+	}
+}
+
+@media (max-width: 599px) {
+
+	.header {
+		padding-block: 8px;
+	}
+
+	.inner {
+		padding-inline: 12px;
+	}
+
+	.heading1 {
+		width: 154px;
+	}
+}

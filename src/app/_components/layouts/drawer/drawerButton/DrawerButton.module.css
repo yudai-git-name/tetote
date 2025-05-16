@@ -1,0 +1,121 @@
+.drawerButton.colorChange .bar,
+.drawerButton.colorChange .bar::before,
+.drawerButton.colorChange .bar::after {
+	background-color: var(--bgTertiary);
+}
+
+.drawerButton.colorChange .barText {
+	color: var(--bgTertiary);
+}
+
+.subPageBar {
+	background-color: var(--textPrimary) !important;
+}
+
+.subPageBar::before,
+.subPageBar::after {
+	background-color: var(--textPrimary) !important;
+}
+
+.subPageColor {
+	color: var(--textPrimary) !important;
+}
+
+.drawerButton {
+	position: fixed;
+	top: 14px;
+	right: 30px;
+	width: 52px;
+	height: 52px;
+	z-index: 99999;
+}
+
+.bar {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: var(--bgPrimary);
+	transition: 0.3s ease-in-out;
+}
+
+.bar::before,
+.bar::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background-color: var(--bgPrimary);
+	transition: 0.3s ease-in-out;
+}
+
+.bar::before {
+	top: -13px;
+}
+
+.bar::after {
+	bottom: -13px;
+}
+
+.barText {
+	position: absolute;
+	bottom: -10px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 12px;
+	color: var(--textSecondary);
+	line-height: 100%;
+	transition: 0.3s ease-in-out;
+}
+
+.drawerButton.open .bar {
+	background-color: transparent !important;
+}
+
+.drawerButton.open .bar::before,
+.drawerButton.open .bar::after {
+	background: var(--bgTertiary);
+}
+
+.drawerButton.open .bar::before {
+	transform: rotate(45deg);
+	top: 0;
+}
+
+.drawerButton.open .bar::after {
+	transform: rotate(-45deg);
+	bottom: 0;
+}
+
+.drawerButton.open .barText {
+	opacity: 0;
+}
+
+@media (max-width: 768px) {
+
+	.buttons {
+		display: none;
+	}
+}
+
+@media (max-width: 599px) {
+
+	.drawerButton {
+		width: 32px;
+		height: 32px;
+		top: 8px;
+		right: 17px;
+	}
+
+	.bar::before {
+		top: -10px;
+	}
+
+	.bar::after {
+		bottom: -10px;
+	}
+
+	.barText {
+		font-size: 10px;
+	}
+}

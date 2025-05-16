@@ -1,0 +1,164 @@
+.card {
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+.body {
+	margin-top: -50px;
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+.bodyHead {
+	margin-top: 16px;
+	display: flex;
+	flex-direction: column-reverse;
+	font-weight: 700;
+}
+
+.heading3 {
+	margin-top: 16px;
+	font-size: 24px;
+	line-height: 100%;
+}
+
+.wrap {
+	display: flex;
+	gap: 9px;
+}
+
+.position,
+.entry {
+	line-height: 100%;
+}
+
+.entry {}
+
+.heading4 {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.heading4Top,
+.heading4Bottom {
+	width: fit-content;
+	padding-block: 5px;
+	background: var(--bgQuaternary);
+	line-height: 100%;
+	white-space: nowrap;
+}
+
+.heading4Bottom {}
+
+.button {
+	margin-top: 80px;
+	max-width: 355px;
+	width: 100%;
+	margin-inline: auto;
+}
+
+.arrows {
+	position: absolute;
+	bottom: -150px;
+	right: clamp(1.25rem, -26.401rem + 45.1vw, 14.188rem);
+	width: 136px;
+	display: flex;
+	justify-content: space-between;
+	z-index: 10;
+}
+
+.arrow {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 58px;
+	height: 58px;
+	border: 1px solid var(--borderPrimary);
+	border-radius: 100vmax;
+	background: transparent;
+	cursor: pointer;
+	color: var(--textPrimary);
+	font-size: 24px;
+	transition: background-color 0.3s;
+}
+
+.arrow:hover {
+	background: rgba(0, 0, 0, 0.05);
+}
+
+.prev svg,
+.next svg {
+	width: 22px;
+}
+
+.prev svg {
+	transform: rotate(180deg);
+}
+
+@media (max-width: 960px) {
+
+	.button {
+		margin-top: 170px;
+	}
+
+	.arrows {
+		bottom: -120px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 170px;
+	}
+}
+
+@media (max-width: 768px) {
+
+	.button {
+		margin-top: 150px;
+	}
+
+	.arrows {
+		bottom: -90px;
+	}
+}
+
+@media (max-width: 599px) {
+
+	.bodyHead {
+		margin-top: 14px;
+	}
+
+	.heading3 {
+		margin-top: 14px;
+		font-size: 20px;
+	}
+
+	.wrap {
+		font-size: 12px;
+	}
+
+	.heading4 {
+		font-size: 16px;
+	}
+
+	.button {
+		margin-top: 64px;
+	}
+
+	.arrows {
+		display: none;
+	}
+
+	.staff {
+		margin-top: 95px;
+	}
+
+	.subText {
+		margin-top: 43px;
+	}
+
+	.button {
+		max-width: 277px;
+	}
+}

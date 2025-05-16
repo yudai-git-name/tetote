@@ -1,0 +1,253 @@
+.fv {
+	position: relative;
+	padding-block: 43px;
+	background: var(--bgSecondary);
+}
+
+.fvInner {}
+
+.fvContent {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.fvBody {
+	max-width: calc((605 / 1024) * 100%);
+	width: 100%;
+}
+
+.fvBodyHead {
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+}
+
+.fvBodyHeadHeading2,
+.fvBodyHeadSubTitle {
+	width: fit-content;
+	padding: 3px 10px;
+	background: var(--bgPrimary);
+	font-weight: 700;
+	line-height: 100%;
+}
+
+.fvBodyHeadHeading2 {
+	font-size: clamp(1.75rem, 1.574rem + 0.75vw, 2.25rem);
+}
+
+.fvBodyHeadSubTitle {
+	font-size: clamp(1.25rem, 1.162rem + 0.38vw, 1.5rem);
+}
+
+.aboutMe {
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+}
+
+.aboutMeWrap {
+	order: 2;
+	margin-top: 12px;
+	display: flex;
+	align-items: baseline;
+	gap: 20px;
+}
+
+.aboutMeHeading1 {
+	font-size: 24px;
+	font-weight: 700;
+}
+
+.aboutMeEntry {}
+
+.aboutMePosition {
+	order: 1;
+	font-size: 14px;
+	color: var(--textTertiary);
+	font-weight: 700;
+	line-height: 100%;
+}
+
+.aboutMeSelfIntroduction {
+	order: 3;
+	margin-top: 14px;
+	line-height: 180%;
+}
+
+.fvImageWrap {
+	max-width: calc((286 / 1024) * 100%);
+	width: 100%;
+}
+
+.staffDetailContent {
+	margin-top: 101px;
+}
+
+.staffDetailContentInner {
+	display: flex;
+	justify-content: space-between;
+}
+
+.items {
+	display: flex;
+	flex-direction: column;
+	gap: 23px;
+	max-width: calc((710 / 1024) * 100%);
+	width: 100%;
+}
+
+.item {}
+
+.heading2 {
+	position: relative;
+	font-size: 24px;
+	font-weight: 700;
+}
+
+.heading2::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: -238px;
+	width: 216px;
+	height: 1px;
+	background: var(--bgTertiary);
+}
+
+.text {
+	margin-top: 50px;
+	line-height: 180%;
+}
+
+.item {}
+
+.heading2 {}
+
+.text {}
+
+.sidebar {
+	width: 258px;
+	max-width: calc((258 / 1024) * 100%);
+	width: 100%;
+}
+
+.sidebarInner {
+	position: sticky;
+	top: 130px;
+}
+
+.sidebarTitle {
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 150%;
+}
+
+.sidebarItems {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	margin-top: 13px;
+}
+
+.sidebarItem {
+	font-size: 14px;
+	line-height: 150%;
+	color: var(--textQuinary);
+}
+
+.othersStaff {
+	margin-top: 106px;
+	margin-bottom: 139px;
+}
+
+.othersStaffInner {}
+
+.othersStaffHead {
+	text-align: center;
+}
+
+.othersStaffHeadHeading2 {
+	font-size: 32px;
+	font-weight: 700;
+	line-height: 100%;
+}
+
+.othersStaffContent {
+	margin-top: 50px;
+}
+
+.othersStaffBoxes {
+	display: grid;
+	gap: 43px;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.othersStaffBox {}
+
+.box {}
+
+@media (max-width: 768px) {
+
+	.fvContent {
+		flex-direction: column;
+		gap: 30px;
+	}
+
+	.fvBody {
+		max-width: 100%;
+	}
+
+	.aboutMeSelfIntroduction {
+		margin-top: 18px;
+		font-size: 14px;
+	}
+
+	.fvImageWrap {
+		max-width: 400px;
+		/* position: absolute;
+		max-width: 100%;
+		height: 100%; */
+	}
+
+	.fvImage {
+		/* object-fit: cover;
+		height: 100%; */
+	}
+
+	.staffDetailContent {
+		margin-top: 70px;
+	}
+
+	.items {
+		max-width: 100%;
+		gap: 42px;
+	}
+
+	.heading2 {
+		font-size: 22px;
+	}
+
+	.text {
+		margin-top: 24px;
+		font-size: 14px;
+	}
+
+	.sidebar {
+		display: none;
+	}
+
+	.othersStaff {
+		margin-top: 84px;
+		margin-bottom: 84px;
+	}
+
+	.othersStaffHeadHeading2 {
+		font-size: 26px;
+	}
+
+	.othersStaffBoxes {
+		gap: 34px;
+	}
+}

@@ -1,0 +1,187 @@
+.blogDetail {
+	margin-top: 34px;
+}
+
+.inner {
+	padding: 40px 40px 23px 40px;
+	background: var(--bgPrimary);
+	border-radius: 10px;
+}
+
+.head {
+	display: flex;
+	flex-direction: column-reverse;
+	gap: 25px;
+}
+
+.heading1 {
+	font-size: clamp(1.5rem, 1.324rem + 0.75vw, 2rem);
+	font-weight: 700;
+	/* line-height: 100%; */
+	line-height: 150%;
+}
+
+.categoryWrap {
+	display: flex;
+	align-items: center;
+	gap: 19px;
+}
+
+.category,
+.date {
+	font-size: 14px;
+}
+
+.category {
+	position: relative;
+	padding-left: 17px;
+}
+
+.category::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	width: 14px;
+	height: 14px;
+	background-image: url(/image/_common/icon/icon_note.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.date {}
+
+.content {
+	margin-top: 41px;
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+.preface {
+	margin-top: 45px;
+}
+
+.prefaceText {
+	line-height: 180%;
+}
+
+.wrap {}
+
+.blogHeading2 {
+	margin-top: 23px;
+	font-size: 24px;
+	font-weight: 700;
+}
+
+.text {
+	margin-top: 50px;
+	line-height: 180%;
+}
+
+.imageWrap {}
+
+.buttons {
+	margin-top: 139px;
+	display: flex;
+	justify-content: center;
+	background: var(--bgQuinary);
+}
+
+.button {
+	position: relative;
+	width: 50%;
+	text-align: left;
+}
+
+.button:nth-of-type(2) {
+	border-left: 1px solid var(--borderPrimary);
+}
+
+.buttonLink {
+	width: 100%;
+	padding-block: 30px;
+	display: inline-flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.buttonLinkInner {
+	position: relative;
+	max-width: 100%;
+	margin-inline: auto;
+}
+
+.icon {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 26px;
+}
+
+.iconLeft {
+	left: -42px;
+}
+
+.iconRight {
+	right: -42px;
+}
+
+.title {}
+
+.date {}
+
+@media (max-width: 768px) {
+
+	.buttons {
+		flex-direction: column;
+	}
+
+	.button {
+		width: 100%;
+	}
+
+	.button:nth-of-type(2) {
+		border-left: none;
+		border-top: 1px solid var(--borderPrimary);
+	}
+
+	.buttonLinkInner {
+		text-align: center;
+	}
+}
+
+@media (max-width: 599px) {
+
+	.inner {
+		padding: 40px 20px;
+		border-radius: 0;
+	}
+
+	.head {
+		gap: 16px;
+	}
+
+	.content {
+		margin-top: 32px;
+	}
+
+	.preface {
+		margin-top: 24px;
+		font-size: 14px;
+	}
+
+	.heading2 {
+		margin-top: 36px;
+	}
+
+	.text {
+		margin-top: 28px;
+		font-size: 14px;
+	}
+
+	.buttons {
+		margin-top: 68px;
+	}
+}

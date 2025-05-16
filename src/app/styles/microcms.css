@@ -1,0 +1,32 @@
+.blogTopText {
+	margin-top: 45px;
+	line-height: 180%;
+}
+
+.blogHeading2 {
+	margin-top: 23px;
+	font-size: 24px;
+	font-weight: 700;
+}
+
+.blogText {
+	margin-top: 50px;
+	line-height: 180%;
+}
+
+@media (max-width: 599px) {
+
+	.blogHeading2 {
+		margin-top: 36px;
+	}
+
+	.blogTopText {
+		margin-top: 32px;
+		font-size: 14px;
+	}
+
+	.blogText {
+		margin-top: 28px;
+		font-size: 14px;
+	}
+}

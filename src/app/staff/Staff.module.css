@@ -1,0 +1,25 @@
+.staff {
+	margin-top: 130px;
+	margin-bottom: 140px;
+}
+
+.inner {}
+
+.content {}
+
+.boxes {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	column-gap: 43px;
+	row-gap: 48px;
+}
+
+.box {}
+
+@media (max-width: 599px) {
+
+	.staff {
+		margin-top: 80px;
+		margin-bottom: 90px;
+	}
+}

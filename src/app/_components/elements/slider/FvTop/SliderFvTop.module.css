@@ -1,0 +1,15 @@
+.image {
+	height: 823px;
+	object-fit: cover;
+}
+
+@media (max-width: 599px) {
+
+	.image {
+		height: 667px;
+	}
+
+	.image01 {
+		object-position: 70%;
+	}
+}

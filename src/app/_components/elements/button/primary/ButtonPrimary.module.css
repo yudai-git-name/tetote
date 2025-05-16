@@ -1,0 +1,39 @@
+.buttonLink {
+	position: relative;
+	text-align: center;
+	width: 100%;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 100%;
+	padding-block: 30px;
+	border: 1px solid var(--borderPrimary);
+	background: var(--bgPrimary);
+	transition: all 0.3s ease;
+}
+
+.buttonLink:hover,
+.buttonLink:focus {
+	background: var(--buttonPrimary);
+	color: var(--textSecondary);
+}
+
+.icon {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 23px;
+	font-size: 26px;
+}
+
+@media (max-width: 599px) {
+
+	.button {
+		margin-top: 40px;
+		max-width: 277px;
+	}
+
+	.buttonLink {
+		padding-block: 23px;
+		font-size: 16px;
+	}
+}

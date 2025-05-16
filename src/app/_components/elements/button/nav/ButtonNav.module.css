@@ -1,0 +1,27 @@
+.button {
+}
+
+.header {
+	width: 126px;
+}
+
+.menu {
+	width: 100%;
+}
+
+.buttonLink {
+	width: 100%;
+	padding-block: 14px;
+	text-align: center;
+	font-size: 14px;
+	line-height: 100%;
+	color: var(--textSecondary);
+}
+
+.details {
+	background: var(--buttonPrimary);
+}
+
+.entry {
+	background: var(--buttonSecondary);
+}

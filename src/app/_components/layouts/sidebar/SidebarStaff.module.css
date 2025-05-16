@@ -1,0 +1,30 @@
+.sidebar {
+	width: 258px;
+	max-width: calc((258 / 1024) * 100%);
+	width: 100%;
+}
+
+.sidebarInner {
+	position: sticky;
+	top: 130px;
+}
+
+.sidebarTitle {
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 150%;
+}
+
+.sidebarItems {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	margin-top: 13px;
+}
+
+.sidebarItem {
+	font-size: 14px;
+	line-height: 150%;
+	color: var(--textQuinary);
+	font-weight: 700;
+}

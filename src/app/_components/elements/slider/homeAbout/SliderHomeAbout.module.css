@@ -1,0 +1,45 @@
+.sliderOuter {
+	overflow: hidden;
+	width: 100%;
+}
+
+.sliderInner {
+	display: flex;
+	width: max-content;
+}
+
+.slide {
+	flex: 0 0 auto;
+	margin-right: clamp(1rem, 0.574rem + 1.82vw, 2.125rem);
+}
+
+.slide:nth-child(even) {
+	margin-top: clamp(1.688rem, 1.38rem + 1.31vw, 2.5rem);
+}
+
+.sliderContainer {
+	overflow: hidden;
+	width: 100%;
+}
+
+.sliderTrack {
+	display: flex;
+	width: calc(clamp(16.938rem, 11.38rem + 23.71vw, 31.625rem) * 6);
+	/* 画像幅 × 画像数（3 × 2 = 6） */
+	animation: autoScroll 30s linear infinite;
+}
+
+.slide {
+	flex: 0 0 clamp(16.938rem, 11.38rem + 23.71vw, 31.625rem);
+	/* 上のJSXで指定したImageのサイズと一致させる */
+}
+
+@keyframes autoScroll {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translateX(-50%);
+	}
+}

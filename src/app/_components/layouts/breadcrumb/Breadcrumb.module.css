@@ -1,0 +1,30 @@
+.breadcrumb {
+	background: var(--bgSecondary);
+	padding-block: 20px;
+}
+
+.bgSecond {
+	background: var(--textSeptenary);
+}
+
+.inner {
+	display: flex;
+	gap: 16px;
+	padding-inline: 44px;
+}
+
+.breadcrumbItem {
+	position: relative;
+	font-size: 14px;
+}
+
+.breadcrumbItem:nth-child(n + 2)::before {
+	content: '>';
+	position: absolute;
+	top: 0;
+	left: -12px;
+}
+
+.breadcrumbItemLink {
+	line-height: 100%;
+}
