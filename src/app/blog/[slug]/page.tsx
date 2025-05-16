@@ -9,6 +9,7 @@ import { format } from 'date-fns';
 import { getBlogDetail, getBlogList } from '@/app/_libs/microcms/blog';
 import { notFound } from 'next/navigation';
 
+// 👇ここで型を props に直接記述します（Props型もPagePropsも一切使いません）
 export default async function Page({ params }: { params: { slug: string } }) {
   const data = await getBlogDetail(params.slug);
   if (!data) notFound();
@@ -35,6 +36,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
   return (
     <main className="main__sub --bgSecond">
       <Breadcrumb items={breadcrumbItems} bgSecond={true} />
+
       <article className={styles.blogDetail}>
         <div className={clsx(styles.inner, 'innerQuaternary')}>
           <div className={styles.head}>
@@ -50,6 +52,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
               </time>
             </div>
           </div>
+
           <div className={styles.content}>
             <div className={styles.body}>
               <div
@@ -57,6 +60,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
                 dangerouslySetInnerHTML={{ __html: data.content }}
               />
             </div>
+
             {data.image?.url && (
               <div className={styles.imageWrap}>
                 <Image
@@ -113,6 +117,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
   );
 }
 
+// ✅ 静的生成に必須：slugの一覧をNext.jsに教える
 export async function generateStaticParams() {
   const allData = await getBlogList({
     queries: {
