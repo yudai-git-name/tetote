@@ -9,15 +9,15 @@ import { format } from 'date-fns';
 import { getBlogDetail, getBlogList } from '@/app/_libs/microcms/blog';
 import { notFound } from 'next/navigation';
 
-type Props = {
-  params: {
-    slug: string;
-  };
-};
 
-export default async function Page({ params }: Props) {
-  const data = await getBlogDetail(params.slug);
-  if (!data) notFound();
+
+	export default async function Page({
+		params,
+	}: {
+		params: { slug: string };
+	}) {
+		const data = await getBlogDetail(params.slug);
+		if (!data) notFound();
 
   // 全記事一覧取得（publishedAt順）で前後記事を特定
   const allData = await getBlogList({
