@@ -1,3 +1,5 @@
+// 👇 これは src/app/blog/[slug]/page.tsx に上書きして使ってください
+
 import Breadcrumb from '@/app/_components/layouts/breadcrumb/Breadcrumb';
 import Cta from '@/app/_components/layouts/cta/Cta';
 import styles from './Blogdetail.module.css';
@@ -9,7 +11,7 @@ import { format } from 'date-fns';
 import { getBlogDetail, getBlogList } from '@/app/_libs/microcms/blog';
 import { notFound } from 'next/navigation';
 
-// 👇ここで型を props に直接記述します（Props型もPagePropsも一切使いません）
+// ✅ Props型やPagePropsを一切使わない
 export default async function Page({ params }: { params: { slug: string } }) {
   const data = await getBlogDetail(params.slug);
   if (!data) notFound();
@@ -117,7 +119,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
   );
 }
 
-// ✅ 静的生成に必須：slugの一覧をNext.jsに教える
+// ✅ SSG用の関数（paramsをNextに教える）
 export async function generateStaticParams() {
   const allData = await getBlogList({
     queries: {
