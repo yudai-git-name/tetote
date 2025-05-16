@@ -123,3 +123,16 @@ import { notFound } from 'next/navigation';
     </main>
   );
 }
+
+
+export async function generateStaticParams() {
+  const allData = await getBlogList({
+    queries: {
+      limit: 100,
+    },
+  });
+
+  return allData.contents.map((post) => ({
+    slug: post.id,
+  }));
+}
