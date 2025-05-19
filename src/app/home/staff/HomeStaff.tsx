@@ -50,6 +50,10 @@ export default function HomeStaff({ items }: Props) {
               gap: 43,
               rewind: true,
               pagination: false,
+              drag: true,
+              dragAngleThreshold: 45,
+              flickPower: 600,
+              flickVelocityThreshold: 0.6,
               breakpoints: {
                 980: { gap: 20, perPage: 2.6 },
                 768: { perPage: 2.2 },
