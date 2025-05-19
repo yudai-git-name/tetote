@@ -45,8 +45,9 @@ export default function HomeStaff({ items }: Props) {
         <div className={styles.slider}>
           <Splide
             options={{
+							type: 'slide',
               perMove: 1,
-              perPage: 3.6,
+              perPage: 3,
               gap: 43,
               rewind: true,
               pagination: false,
@@ -55,9 +56,9 @@ export default function HomeStaff({ items }: Props) {
               flickPower: 600,
               flickVelocityThreshold: 0.6,
               breakpoints: {
-                980: { gap: 20, perPage: 2.6 },
-                768: { perPage: 2.2 },
-                599: { perPage: 1.6 },
+                980: { gap: 20,},
+                768: { perPage: 2 },
+                599: { perPage: 1},
               },
               classes: {
                 arrows: styles.arrows,
